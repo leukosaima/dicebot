@@ -13,3 +13,6 @@ steps:
     repository: 'jintekicorp/d2ebot'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+    tags: |
+      $(Build.BuildId)
+      latest
