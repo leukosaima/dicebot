@@ -90,3 +90,9 @@ It's support partial name search, e.g '!card shadow dragon*' will post images of
 @Kisho (and all other members) from Descent: Journeys in the Dark discord server for ideas, testing and help
 
 d2e (https://github.com/any2cards/d2e) repo creator and contributors for all the cards images
+
+## Docker
+
+Set environment variable DISCORD_CLIENT_KEY to your discord bot token, e.g.
+docker run -e DISCORD_CLIENT_KEY=...
+no .env file is needed
