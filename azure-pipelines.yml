@@ -12,6 +12,7 @@ steps:
     containerRegistry: 'docker hub'
     repository: 'jintekicorp/d2ebot'
     command: 'buildAndPush'
+    addPipelineData: false
     Dockerfile: '**/Dockerfile'
     tags: |
       $(Build.BuildId)
