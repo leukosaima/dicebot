@@ -13,7 +13,7 @@ load_dotenv(verbose=True)
 
 client = discord.Client()
 
-# каждый кубик атаки и силы представляет собой список из 6 массивов, каждый из которых отражает одну грань, где первое значение массива - дальность, второе - урон, третье - заряды
+# each attack and power die is a list of 6 arrays, each of which reflects one face, where the first value of the array is range, the second is damage, the third is charges
 blue = [[0,0,0],[2,2,1],[3,2,0],[4,2,0],[5,1,0],[6,1,1],'blue']
 
 green = [[0,1,0],[0,0,1],[1,1,0],[1,0,1],[0,1,1],[1,1,1],'green']
@@ -24,9 +24,9 @@ brown = [0,0,0,1,1,2]
 gray = [0,1,1,1,2,3]
 black = [0,2,2,2,3,4]
 
-# файл статистики содержит список из 7 массивов, каждый из которых относится к одному из кубиков в порядке того, как они перечислены выше (т.е синий, зеленый и т.д)
-# отдельные элементы каждого массива показывают количество бросков соответствующих им граней кубика, также в том порядке, как эти грани перечислены для каждого кубика выше
-# таким образом значение списка stat[2][5] отражает общее количество бросков шестой грани для желтого кубика
+# the statistics file contains a list of 7 arrays, each of which refers to one of the cubes in the order they are listed above (i.e. blue, green, etc.)
+# the individual elements of each array show the number of rolls of their corresponding die faces, also in the order that these faces are listed for each die above
+# thus the value of the list stat [2] [5] reflects the total number of sixth facets for the yellow die
 stat_input = open('stat.pkl', 'rb')
 stat = pkl.load(stat_input)
 stat_input.close()
@@ -235,4 +235,4 @@ async def on_message(message):
 
 
 
-client.run(os.getenv("DISCORD_CLIENT_KEY"))
+client.run(os.getenv("DISCORD_BOT_TOKEN"))

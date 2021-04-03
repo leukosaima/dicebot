@@ -93,6 +93,6 @@ d2e (https://github.com/any2cards/d2e) repo creator and contributors for all the
 
 ## Docker
 
-Set environment variable DISCORD_CLIENT_KEY to your discord bot token, e.g.
-docker run -e DISCORD_CLIENT_KEY=...
+Set environment variable DISCORD_BOT_TOKEN to your discord bot token, e.g.
+docker run -e DISCORD_BOT_TOKEN=...
 no .env file is needed
